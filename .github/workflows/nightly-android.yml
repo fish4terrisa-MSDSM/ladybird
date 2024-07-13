@@ -76,6 +76,9 @@ jobs:
           GRADLE_OPTS: '-Xmx3072m'
           SERENITY_CACHE_DIR: ${{ github.workspace }}/Build/caches
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        
       - name: Save Caches
         uses: ./.github/actions/cache-save
         with:
