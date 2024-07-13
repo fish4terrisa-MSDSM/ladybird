@@ -75,9 +75,13 @@ jobs:
         env:
           GRADLE_OPTS: '-Xmx3072m'
           SERENITY_CACHE_DIR: ${{ github.workspace }}/Build/caches
-
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+      - name: Save artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Ladybird-release-unsigned.apk
+          path: /Users/runner/work/ladybird/ladybird/Ladybird/Android/build/outputs/apk/release/Ladybird-release-unsigned.apk
+          
+        
         
       - name: Save Caches
         uses: ./.github/actions/cache-save
