@@ -37,6 +37,7 @@ cmake -S "${LADYBIRD_SOURCE_DIR}/Meta/Lagom" -B "$BUILD_DIR/lagom-tools" \
     -DSERENITY_CACHE_DIR="$CACHE_DIR" \
     -DLAGOM_TOOLS_ONLY=ON \
     -DINSTALL_LAGOM_TOOLS=ON \
+    -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_TOOLCHAIN_FILE="$LADYBIRD_SOURCE_DIR/Toolchain/Tarballs/vcpkg/scripts/buildsystems/vcpkg.cmake" \
     -DVCPKG_INSTALL_OPTIONS="--no-print-usage" \
     -DVCPKG_OVERLAY_TRIPLETS="$LADYBIRD_SOURCE_DIR/Meta/CMake/vcpkg/release-triplets" \
